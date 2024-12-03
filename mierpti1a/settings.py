@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4o%zvzc4wjzsstx5zc0jh^+3ln6m=*#t$(8!lm+j8+o78mz)tw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'miapp.local']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '3.133.113.84']
 
 SECURE_SSL_REDIRECT = False  # No redirigir automáticamente a HTTPS
 CSRF_COOKIE_SECURE = False
