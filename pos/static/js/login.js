@@ -40,7 +40,7 @@ document.getElementById("formLogin").addEventListener("submit", function(event) 
     const button = document.getElementById('btnAceptar');
 
     // Realizar la solicitud POST a la API usando fetch
-    fetch('http://127.0.0.1:8000/RRHH/login/', {
+    fetch('http://3.133.113.84:8000/RRHH/login/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ document.getElementById("formLogin").addEventListener("submit", function(event) 
             const puesto = data.empleado.puesto.split(' ')[0];
             if (puesto === "Administrador") {
                 console.log("Debug: Redirigiendo al CRUD de productos para administrador.");
-                window.location.href = 'http://127.0.0.1:8000/pos/productos/';
+                window.location.href = 'http://3.133.113.84:8000/pos/productos/';
             } else {
                 // Redirigir al usuario normal a la vista de ventas
                 window.location.href = 'venta/';
