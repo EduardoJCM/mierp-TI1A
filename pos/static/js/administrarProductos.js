@@ -300,7 +300,7 @@ async function limpiarDatos() {
     document.getElementById("modalImagen").required = true;
     document.getElementById("modalImagen").value = "";
     try {
-        const response = await fetch(`http://localhost:8000/RRHH/get_sucursales/`);
+       const response = await fetch(`http://3.133.113.84:8000/RRHH/get_sucursales/`);
         
         // Verifica si la respuesta es válida
         if (!response.ok) {
