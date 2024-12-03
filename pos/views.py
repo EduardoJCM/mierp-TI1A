@@ -102,7 +102,7 @@ def index(request):
                     # Redirigir a la vista correspondiente según el rol
                     if puesto == "Administrador":
                         print("Debug: Redirigiendo al CRUD de productos para administrador.")
-                        return redirect('http://127.0.0.1:8000/pos/productos/')
+                        return redirect('http://3.133.113.84:8000/pos/productos/')
                 except json.JSONDecodeError:
                     print("Debug: Error al decodificar los datos del empleado.")
                     messages.error(request, "Error al procesar los datos del empleado.")
@@ -146,7 +146,7 @@ def get_producto_por_id(request, producto_id):
 
 def sincronizar_sucursales():
     try:
-        response = requests.get("http://localhost:8000/RRHH/get_sucursales/")
+        response = requests.get("http://3.133.113.84:8000/RRHH/get_sucursales/")
         if response.status_code == 200:
             data = response.json()
             if data.get('message') == "Success":
@@ -170,7 +170,7 @@ def sincronizar_sucursales():
 def importar_empleados_desde_rrhh(request):
     try:
         # URL de la API en RRHH
-        rrhh_url = "http://localhost:8000/RRHH/get_empleados/"
+        rrhh_url = "http://3.133.113.84:8000/RRHH/get_empleados/"
 
         # Realiza la solicitud GET para obtener los datos de empleados
         response = requests.get(rrhh_url)
